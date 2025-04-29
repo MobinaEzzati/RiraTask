@@ -1,3 +1,4 @@
+let dollar = prompt ("enter dollar")
 function convert() {
   const amount = document.getElementById("amount").value;
   const conversionType = document.getElementById("conversion-type").value;
@@ -8,14 +9,14 @@ function convert() {
     return;
   }
 
-  const dollarToRialRate = 60000; // نرخ تبدیل فرضی: هر دلار ۶۰ هزار تومان
+   
   let result = 0;
 
   if (conversionType === "dollar-to-rial") {
-    result = amount * dollarToRialRate;
+    result = amount * dollar;
     resultDiv.innerText = `${amount} دلار = ${result.toLocaleString()} ریال`;
   } else {
-    result = amount / dollarToRialRate;
+    result = amount / dollar;
     resultDiv.innerText = `${amount} ریال = ${result.toFixed(4)} دلار`;
   }
 }
